@@ -58,21 +58,21 @@ function generatePassword() {
     passElement.innerText = password;
 }
 function generater() {
-    const xs = [];
+    const components = [];
     if (upperElement.checked) {
-        xs.push(getUppercase());
+        components.push(getUppercase());
     }
     if (lowerElement.checked) {
-        xs.push(getLowercase());
+        components.push(getLowercase());
     }
     if (numberElement.checked) {
-        xs.push(getNumber());
+        components.push(getNumber());
     }
     if (symbolElement.checked) {
-        xs.push(getSymbol());
+        components.push(getSymbol());
     }
-    if (xs.length === 0) return "";
-    return xs[Math.floor(Math.random() * xs.length)];
+    if (components.length === 0) return "";
+    return components[Math.floor(Math.random() * components.length)];
 }
 generateElement.addEventListener("click", generatePassword);
 copyElement.addEventListener("click", () => {
