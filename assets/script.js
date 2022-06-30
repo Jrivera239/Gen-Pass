@@ -1,5 +1,5 @@
 
-/* Add event listener to generate button */
+/* EL IDs' */
 
 const upperElement = document.getElementById("upper");
 
@@ -37,7 +37,7 @@ function getSymbol() {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-// Get references to the generate element
+// Get references to the generate element //
 
 function generatePassword() {
     const pas = pasElement.value;
