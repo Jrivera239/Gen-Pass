@@ -1,5 +1,5 @@
 
-// Add event listener to generate button
+/* Add event listener to generate button */
 
 const upperElement = document.getElementById("upper");
 
@@ -18,6 +18,7 @@ const pasElement = document.getElementById("pas");
 const generateElement = document.getElementById("btn");
 
 
+/* Conjunction of words, number and signs added to Generate password */
 
 const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -35,7 +36,9 @@ function getNumber() {
 function getSymbol() {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
-// Get references to the #generate element
+
+// Get references to the generate element
+
 function generatePassword() {
     const pas = pasElement.value;
     let password = "";
@@ -74,6 +77,7 @@ function generater() {
     if (components.length === 0) return "";
     return components[Math.floor(Math.random() * components.length)];
 }
+
 generateElement.addEventListener("click", generatePassword);
 copyElement.addEventListener("click", () => {
     const textarea = document.createElement("textarea");
